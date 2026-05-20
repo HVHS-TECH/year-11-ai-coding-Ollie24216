@@ -1,15 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>My AI game</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Poo Pong</title>
+	<style>
+		html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+		body{display:flex;align-items:center;justify-content:center;background:#111;color:#222}
+		.wrap{width:960px;max-width:96%;text-align:center}
+		h1{color:#fff;margin:8px 0 12px;font-size:28px}
+		.arena{position:relative}
+		canvas{display:block;width:900px;height:500px;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,.6);margin:0 auto;background:#e6d9b8}
+		/* Simulated baby-oil sheen over the canvas */
+		.arena::after{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:940px;height:540px;border-radius:10px;pointer-events:none;background:radial-gradient(ellipse at 10% 10%,rgba(255,255,255,0.25),transparent 10%),radial-gradient(ellipse at 90% 80%,rgba(255,255,255,0.12),transparent 15%);mix-blend-mode:screen;animation:sheen 6s linear infinite}
+		@keyframes sheen{0%{transform:translate(-60%,-50%) scale(1)}50%{transform:translate(-40%,-50%) scale(1.05)}100%{transform:translate(-60%,-50%) scale(1)}}
+		.controls{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:12px;color:#fff}
+		.score{font-weight:700;font-size:20px}
+		button{padding:8px 12px;border-radius:6px;border:0;background:#ffaa00;color:#000;cursor:pointer}
+		.hint{color:#ccc;font-size:13px;margin-top:8px}
+	</style>
 </head>
 <body>
+	<div class="wrap">
+		<h1>Poo Pong</h1>
+		<div class="arena">
+			<canvas id="game" width="900" height="500"></canvas>
+		</div>
+		<div class="controls">
+			<div>Left: W / S</div>
+			<div class="score" id="score">0 : 0</div>
+			<div>Right: ↑ / ↓</div>
+			<button id="start">Start</button>
+			<button id="reset">Reset</button>
+		</div>
+		<div class="hint">Ball: 💩 — Background: shiny baby-oil look. Press Start to play.</div>
+	</div>
 
-<h1>AI game goes here</h1>
-
-
-
-<script src="game.js"></script>
+	<script src="game.js"></script>
 </body>
 </html>
 

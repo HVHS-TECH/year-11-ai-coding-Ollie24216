@@ -1,1 +1,9 @@
-[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=23962290)
+# Poo Pong
+
+Open `index.html` in a browser to play the game. Use `W` / `S` to move the left paddle and the arrow keys to move the right paddle. Press Start to begin and Reset to reset scores.
+
+Files:
+- index.html — game UI and styles
+- game.js — game logic
+
+Enjoy the (squeaky) shiny baby-oil background and the poo ball.
